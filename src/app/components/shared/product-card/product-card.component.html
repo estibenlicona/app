@@ -1,0 +1,11 @@
+<div class="card shadow">
+  <img [src]="product.img" class="card-img-top" alt="...">
+  <div class="card-img-overlay pl-0 pt-1" *ngIf="!product.available">
+    <kbd class="bg-danger">No Disponible</kbd>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <h5 class="card-title">{{ product.price | number:'1.3-3' }}</h5>
+  </div>
+</div>
